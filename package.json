@@ -1,0 +1,38 @@
+{
+  "name": "zhzxang.github.io",
+  "version": "1.0.0",
+  "description": "zhzxang's blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "vue": "^2.5.16"
+  },
+  "devDependencies": {
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.10",
+    "less": "^3.0.1",
+    "less-loader": "^4.1.0",
+    "url-loader": "^1.0.1",
+    "vue-loader": "^14.2.1",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.11",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhzxang/zhzxang.github.io.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "zhzxang [xuzhang3371@163.com]",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhzxang/zhzxang.github.io/issues"
+  },
+  "homepage": "https://github.com/zhzxang/zhzxang.github.io#readme"
+}
