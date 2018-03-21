@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
-import home from "./views/Home";
+import homePage from "./views/Home";
+import editPage from './views/Edit';
 
 Vue.use(Router);
 
@@ -9,7 +10,12 @@ export default new Router({
     {
       path: "/home",
       name: "home",
-      component: home
+      component: homePage
+    },
+    {
+      path: '/edit',
+      name: 'edit',
+      component: editPage
     },
     {
       path: "/",

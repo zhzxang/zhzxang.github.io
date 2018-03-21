@@ -1,6 +1,9 @@
 <template>
+  <!-- <header></header> -->
   <div>
-    home
+    <button class="btn" @click="$router.push('edit')">
+      进入编辑页面
+    </button>
   </div>
 </template>
 
