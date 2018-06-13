@@ -5,7 +5,8 @@
   "main": "index.md",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "jekyll build --destination ../blog --watch"
+    "build": "jekyll build --destination ../blog",
+    "start": "jekyll server --watch"
   },
   "author": "zhxang",
   "license": "ISC"
