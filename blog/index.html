@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="../styles/index.css" rel="stylesheet" type="text/css"/>
+  <title>Zxzxang</title>
+
+</head>
+<body>
+  <div class="home-view" id="home">
+  Zhzxang
+  <h1>welcome</h1>
+</div>
+
+<script>
+window.onload = () => {
+  const home = document.getElementById('home')
+  setTimeout(() => {
+    home.style.height = 0
+    home.style.opacity = 0
+  }, 2000)
+}
+</script>
+
+<style>
+.home-view {
+  height: 100%;
+  width: 100%;
+
+  background-color: #ccc;
+  transition: all .2s ease;
+}
+</style>
+
+<div>header</div>
+
+<li>
+    <a href="/jekyll/update/2018/06/13/welcome-to-jekyll.html">Welcome to Jekyll!</a>
+  </li>
+
+<div> footer </div>
+
+</body>
+</html>
