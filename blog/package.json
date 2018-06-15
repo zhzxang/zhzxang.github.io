@@ -6,8 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "jekyll build --destination ../blog",
-    "start": "jekyll server --watch"
+    "start": "gulp watch && jekyll server --watch"
   },
   "author": "zhxang",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.5.0",
+    "gulp-less": "^3.5.0",
+    "gulp-shell": "^0.6.5"
+  }
 }

@@ -5,43 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <link href="./styles/index.css" rel="stylesheet" type="text/css"/>
+  <link href="./build/main.css" rel="stylesheet" type="text/css"/>
+  <link href="./vender/animate.min.css" rel="stylesheet" type="text/css"/>
   <title>Zxzxang</title>
 
 </head>
 <body>
-  <div class="home-view" id="home">
-  Zhzxang
-  <h1>welcome</h1>
+  <div class="home-view">
+  <div class="jumbotron animated flipInY" id="jumbotron">
+    <img class="slide-top" src="../assets/bg-a-5.png" alt="" width="100%" height="100%" />
+    <img class="slide-top" src="../assets/bg-a-4.png" alt="" width="100%" height="100%" />
+    <img class="slide-top" src="../assets/bg-a-3.png" alt="" width="100%" height="100%" />
+    <img class="slide-top mask" src="../assets/bg-a-7.png" alt="" width="100%" height="100%" />
+  </div>
 </div>
 
 <script>
-window.onload = () => {
-  const home = document.getElementById('home')
-  setTimeout(() => {
-    home.style.height = 0
-    home.style.opacity = 0
-  }, 2000)
-}
+  window.onload = () => {
+    const jumbotron = document.getElementById('jumbotron')
+    const images = jumbotron.children
+    console.log(images)
+    setTimeout(() => {
+      Array.prototype.forEach.call(images, (element, index) => {
+        element.style.top = `-${ index * 200 + window.innerHeight }px`
+      })
+    }, 2000)
+  }
 </script>
 
 <style>
-.home-view {
-  height: 100%;
-  width: 100%;
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow: scroll;
+  background: -webkit-linear-gradient(#115597, #13599c); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(#115597, #13599c); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(#115597, #13599c); /* Firefox 3.6 - 15 */
+  background: linear-gradient(#115597, #13599c); /* 标准的语法（必须放在最后） */
 
-  background-color: #ccc;
-  transition: all .2s ease;
+  color: #fff;
+}
+.home-view {
+  width: 100%;
+  height: 100%;
+}
+.jumbotron {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.jumbotron > .slide-top {
+  position: absolute;
+  top: 0;
+  transition: all 5s ease;
+}
+.jumbotron > .mask {
+  top: 500px;
+  z-index: 10;
 }
 </style>
 
-<div>header</div>
+<div class="content">
+  <div>header</div>
 
-<li>
-    <a href="/jekyll/update/2018/06/13/welcome-to-jekyll.html">Welcome to Jekyll!</a>
-  </li>
+  
+    <li>
+      <a href="/jekyll/update/2018/06/13/welcome-to-jekyll.html">Welcome to Jekyll!</a>
+    </li>
+  
 
-<div> footer </div>
+  <div> footer </div>
+<div>
+</div></div>
 
 </body>
 </html>

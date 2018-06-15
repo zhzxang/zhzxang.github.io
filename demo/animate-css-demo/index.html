@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <title>animate.css demo --zhzxang</title>
+</head>
+<body>
+  <h2>animate.css demo</h2>
+  <div id="demo" class="conetent"></div>
+  <style>
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .conetent {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    justify-items: center;
+  }
+  body > h2 {
+    text-align: center;
+  }
+  .demo-box {
+    width: 200px;
+    height: 200px;
+    border: 10px solid #000;
+    background-color: rgba(51, 133, 255, 0.267);
+
+    margin: 40px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .animated {
+    animation-duration: 2s;
+  }
+  </style>
+
+  <script>
+    const classNames = `bounce	flash	pulse	rubberBand
+shake	headShake	swing	tada
+wobble	jello	bounceIn	bounceInDown
+bounceInLeft	bounceInRight	bounceInUp	bounceOut
+bounceOutDown	bounceOutLeft	bounceOutRight	bounceOutUp
+fadeIn	fadeInDown	fadeInDownBig	fadeInLeft
+fadeInLeftBig	fadeInRight	fadeInRightBig	fadeInUp
+fadeInUpBig	fadeOut	fadeOutDown	fadeOutDownBig
+fadeOutLeft	fadeOutLeftBig	fadeOutRight	fadeOutRightBig
+fadeOutUp	fadeOutUpBig	flipInX	flipInY
+flipOutX	flipOutY	lightSpeedIn	lightSpeedOut
+rotateIn	rotateInDownLeft	rotateInDownRight	rotateInUpLeft
+rotateInUpRight	rotateOut	rotateOutDownLeft	rotateOutDownRight
+rotateOutUpLeft	rotateOutUpRight	hinge	jackInTheBox
+rollIn	rollOut	zoomIn	zoomInDown
+zoomInLeft	zoomInRight	zoomInUp	zoomOut
+zoomOutDown	zoomOutLeft	zoomOutRight	zoomOutUp
+slideInDown	slideInLeft	slideInRight	slideInUp
+slideOutDown	slideOutLeft	slideOutRight	slideOutUp`
+  const animateNames = []
+  classNames.split('\n').forEach(names => {
+    animateNames.push( ...names.split('	'))
+  })
+
+  function startAnim() {
+    const demo = document.getElementById('demo')
+    animateNames.forEach(name => {
+      const par = document.createElement('div')
+      const text = document.createElement('span')
+      const elem = document.createElement('div')
+      elem.className = `demo-box animated ${name}`
+      elem.innerHTML = name
+      text.innerText = name
+      par.appendChild(elem)
+      par.appendChild(text)
+  
+      demo.appendChild(par)
+    })
+  }
+  function removeAnim() {
+    const demo = document.getElementById('demo')
+    const scrollTop = document.documentElement.scrollTop
+    demo.style.display = 'none'
+    setTimeout(() => {
+      demo.style.display = 'grid'
+      document.documentElement.scrollTop = scrollTop
+    })
+  }
+
+  startAnim()
+
+  setInterval(() => {
+    removeAnim()
+  }, 2100)
+  </script>
+</body>
+</html>
